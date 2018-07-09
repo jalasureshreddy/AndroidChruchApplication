@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.EditProfile"
+    android:background="@drawable/gradiant">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="3">
+    <TextView
+        android:id="@+id/name"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name :"
+        android:textSize="16dp"
+        android:textColor="#fff"/>
+    <EditText
+        android:id="@+id/editname"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SureshReddy"
+        android:textColor="#fff"
+        android:textColorHint="#d9e5f3"/>
+</LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/surname"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SurName :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editsurname"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="jala"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/knownas"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="KnownAs :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editknownas"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/gender"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Gender :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+
+            <RadioGroup
+                android:layout_weight="2"
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male "
+                    android:textColor="#fff"
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="#fff"
+                    android:textSize="18sp"/>
+            </RadioGroup>
+
+           <!-- <EditText
+                android:id="@+id/editgender"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="male"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/email"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Email :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editemail"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="jalasureshreddy@gmail.com"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mobile No :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editmobile"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="+27 12345678"
+                android:textColor="#fff"
+                android:inputType="number"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/address"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Address :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editaddress"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/profession"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Profession :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editprofession"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/interest"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Interest :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editinterest"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/otheractivities"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="OtherActivities :"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/editotheractivities"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/dateCreated"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DateCreated : "
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editdatecreated"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/username"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="UserName :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/usernametext"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="jalasureshreddy"
+                android:textColor="#fff"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/password"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Password :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editpassword"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="password"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/chruch"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Chruch :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+
+            <Spinner
+                android:entries="@array/chruch_arrays"
+                android:prompt="@string/chruch_prompt"
+                android:layout_weight="2"
+                android:id="@+id/chruchspinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/userstatus"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="UserStatus :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+
+            <Spinner
+                android:entries="@array/userstatus_arrays"
+                android:layout_weight="2"
+                android:id="@+id/userStatusspinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/cellGroup"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="CellGroup :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+
+            <Spinner
+                android:entries="@array/cellgroup_arrays"
+                android:layout_weight="2"
+                android:id="@+id/cellGroupspinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/ministry"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ministry :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+
+            <Spinner
+                android:entries="@array/ministry_arrays"
+                android:layout_weight="2"
+                android:id="@+id/ministryspinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/branch"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Branch :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+
+            <Spinner
+                android:entries="@array/branch_arrays"
+                android:layout_weight="2"
+                android:id="@+id/branchspinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#009a9a"
+                android:text="Update"
+                android:textColor="#d9e5f3"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="13dp"
+                android:letterSpacing="0.2"/>
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#009a9a"
+                android:text="Cancel"
+                android:textColor="#d9e5f3"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="13dp"
+                android:letterSpacing="0.2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

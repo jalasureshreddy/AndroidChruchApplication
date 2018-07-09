@@ -1,3 +1,58 @@
 <resources>
     <string name="app_name">ChruchApp</string>
+
+    <string name="chruch_prompt">Choose a Chruch</string>
+
+
+    <string-array name="chruch_arrays">
+        <item>Chruch Name</item>
+        <item>Chruch 1</item>
+        <item>Chruch 2</item>
+    </string-array>
+
+
+    <string-array name="month_arrays">
+        <item>Month</item>
+        <item>Month 1</item>
+        <item>Month 2</item>
+    </string-array>
+
+    <string-array name="year_arrays">
+        <item>Year</item>
+        <item>Year 1</item>
+        <item>Year 2</item>
+    </string-array>
+
+    <string-array name="straight_arrays">
+        <item>Straight</item>
+        <item>Straight 1</item>
+        <item>Straight 2</item>
+    </string-array>
+
+
+
+    <string-array name="userstatus_arrays">
+        <item>User Status</item>
+        <item>Chruch 1</item>
+        <item>Chruch 2</item>
+    </string-array>
+
+    <string-array name="cellgroup_arrays">
+        <item>Cell Group</item>
+        <item>Chruch 1</item>
+        <item>Chruch 2</item>
+    </string-array>
+
+    <string-array name="ministry_arrays">
+        <item>Ministry Name</item>
+        <item>Chruch 1</item>
+        <item>Chruch 2</item>
+    </string-array>
+
+    <string-array name="branch_arrays">
+        <item>Branch Name</item>
+        <item>Chruch 1</item>
+        <item>Chruch 2</item>
+    </string-array>
+
 </resources>

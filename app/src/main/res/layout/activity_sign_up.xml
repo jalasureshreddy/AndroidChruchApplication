@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradiant"
+    android:background="#0E2F44"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                             android:id="@+id/lastname"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Last Name"
+                            android:hint="SurName"
                             android:textColorHint="#d9e5f3"
                             android:layout_marginLeft="15dp"
                             android:background="#00000000"

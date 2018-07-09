@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.Donation"
+    android:background="#0E2F44">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name on Card :"
+            android:textColor="#fff"/>
+
+        <EditText
+            android:layout_weight="2"
+            android:id="@+id/firstname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customborder"
+            android:letterSpacing="0.1"
+            android:textSize="16dp"
+            android:inputType="text"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/cardnumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Card Number :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+
+            <EditText
+                android:layout_weight="2"
+                android:id="@+id/cardnumberedit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customborder"
+                android:letterSpacing="0.1"
+                android:textSize="16dp"
+                android:inputType="text"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:id="@+id/expiry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Expiration Date :"
+                android:textColor="#fff"/>
+
+            <Spinner
+                android:entries="@array/month_arrays"
+                android:background="@drawable/customborder"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:entries="@array/year_arrays"
+                android:background="@drawable/customborder"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:id="@+id/straight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Straight/Budget :"
+                android:textColor="#fff"/>
+
+            <Spinner
+                android:entries="@array/straight_arrays"
+                android:background="@drawable/customborder"
+                android:layout_weight="1"
+                android:id="@+id/straightspinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:id="@+id/cvv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cvv :"
+                android:textColor="#fff"/>
+
+            <EditText
+                android:layout_weight="2"
+                android:id="@+id/cvvedittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customborder"
+                android:letterSpacing="0.1"
+                android:textSize="16dp"
+                android:inputType="text"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E2F44"
+    android:orientation="vertical"
+    tools:context=".screens.LandingScreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/chruchimage"
+        android:scaleType="fitXY" />
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/customborder"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="Home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TableLayout
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+    <TableRow
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp">
+
+        <TextView
+            android:id="@+id/aboutus"
+            android:background="@drawable/border_bottom_right"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="About us \n" />
+
+        <TextView
+            android:id="@+id/visitorsform"
+            android:background="@drawable/border_bottom_right"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Visitors \nForm" />
+        <TextView
+            android:id="@+id/cellgroup"
+            android:background="@drawable/border_bottom"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Cell \nGroups" />
+    </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp">
+
+            <TextView
+                android:id="@+id/becomemember"
+                android:background="@drawable/border_bottom_right"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Become a\nMember" />
+
+            <TextView
+                android:id="@+id/ministry"
+                android:background="@drawable/border_bottom_right"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Ministries \n " />
+            <TextView
+                android:id="@+id/chruchevents"
+                android:background="@drawable/border_bottom"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Church \nEvents" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp">
+
+            <TextView
+                android:id="@+id/giving"
+                android:background="@drawable/border_bottom_right"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Giving \n" />
+
+            <TextView
+                android:id="@+id/announcement"
+                android:background="@drawable/border_bottom_right"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Annouce \nments" />
+            <TextView
+                android:id="@+id/sermons"
+                android:background="@drawable/border_bottom"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Sermons \n" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp">
+
+            <TextView
+                android:id="@+id/branches"
+                android:background="@drawable/border_bottom_right"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Branches \n" />
+
+            <TextView
+                android:id="@+id/chruchgallery"
+                android:background="@drawable/border_bottom_right"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Chruch \nGallery" />
+            <TextView
+                android:id="@+id/contactdetails"
+                android:background="@drawable/border_bottom"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Contact \nDetails" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

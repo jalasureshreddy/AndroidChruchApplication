@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".screens.MainActivity">
+        <activity android:name=".screens.LandingScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".screens.SignUpActivity" />
-        <activity android:name=".screens.Dashboard"></activity>
+        <activity android:name=".screens.Dashboard" />
+        <activity android:name=".screens.EditProfile" />
+        <activity android:name=".screens.Donation" />
+        <activity android:name=".screens.MainActivity"></activity>
     </application>
 
 </manifest>
