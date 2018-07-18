@@ -32,26 +32,6 @@ public class LandingScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_screen);
         ButterKnife.bind(this);
-        createApiCall();
-
-    }
-
-    private void createApiCall()
-    {
-        ApiCall.get(Constant.BASE_URL, new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-                if(response.isSuccessful())
-                {
-                    System.out.println("Response ==== "+response.body().string());
-                }
-            }
-        });
     }
 
     @OnClick(R.id.becomemember)
@@ -87,5 +67,13 @@ public class LandingScreen extends AppCompatActivity {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
+
+    @OnClick(R.id.ministry)
+    public void ministry()
+    {
+        Intent i = new Intent(this,MinistryScreen.class);
+        startActivity(i);
+    }
+
 
 }

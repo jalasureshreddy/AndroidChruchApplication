@@ -1,28 +1,24 @@
 package com.chruchapp.jalas.chruchapp.screens;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chruchapp.jalas.chruchapp.R;
 import com.chruchapp.jalas.chruchapp.data.RegisterViewModel;
 import com.chruchapp.jalas.chruchapp.network.APIService;
 import com.chruchapp.jalas.chruchapp.network.ApiCall;
-import com.chruchapp.jalas.chruchapp.utils.Constant;
-
-import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Response;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -56,7 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/LatoLight.ttf");
 
-        mAPIService = Constant.getAPIService();
+        mAPIService = ApiCall.getAPIService();
 
         firstname.setTypeface(custom_font);
         lastname.setTypeface(custom_font);
@@ -75,11 +71,12 @@ public class SignUpActivity extends AppCompatActivity {
     @OnClick(R.id.login)
     public void login()
     {
-
         //validate();
         //createApi();
         /*Intent it = new Intent(SignUpActivity.this,MainActivity.class);
         startActivity(it);*/
+        Intent intent =new Intent(this,LandingScreen.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.signup)
@@ -103,8 +100,10 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void createApiService(RegisterViewModel registerViewModel) {
 
-        mAPIService.savePost(registerViewModel.getChurchId(),registerViewModel.getName(),registerViewModel.getSurname(),registerViewModel.getEmailId(),
-                             registerViewModel.getPassword(),registerViewModel.getPhoneNumber(),registerViewModel.getConfirmPassword()).enqueue(new retrofit2.Callback<RegisterViewModel>() {
+       /* mAPIService.savePost(registerViewModel.getChurchId(),registerViewModel.getName(),
+                             registerViewModel.getSurname(),registerViewModel.getEmailId(),
+                             registerViewModel.getPassword(),registerViewModel.getPhoneNumber(),
+                             registerViewModel.getConfirmPassword()).enqueue(new retrofit2.Callback<RegisterViewModel>() {
             @Override
             public void onResponse(retrofit2.Call<RegisterViewModel> call, retrofit2.Response<RegisterViewModel> response) {
 
@@ -118,19 +117,26 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onFailure(retrofit2.Call<RegisterViewModel> call, Throwable t) {
                 Log.e("Suresh", "Unable to submit post to API.");
-
             }
-        });
+        });*/
 
-       /* mAPIService.savePost(registerViewModel).enqueue(new retrofit2.Callback<RegisterViewModel>() {
+        mAPIService.savePost(registerViewModel).enqueue(new retrofit2.Callback<RegisterViewModel>() {
             @Override
             public void onResponse(retrofit2.Call<RegisterViewModel> call, retrofit2.Response<RegisterViewModel> response) {
-
                 System.out.println("response ==== "+response);
-                if(response.isSuccessful()) {
+                Toast.makeText(SignUpActivity.this,"Account Created...",Toast.LENGTH_LONG).show();
+                firstname.getText().clear();
+                lastname.getText().clear();
+                email.getText().clear();
+                mob.getText().clear();
+                username.getText().clear();
+                pass.getText().clear();
+                repass.getText().clear();
+
+               /* if(response.isSuccessful()) {
                     System.out.println(("response === "+response.body().toString()));
                     //   Log.i(TAG, "post submitted to API." + response.body().toString());
-                }
+                }*/
             }
 
             @Override
@@ -138,7 +144,7 @@ public class SignUpActivity extends AppCompatActivity {
                 Log.e("Suresh", "Unable to submit post to API.");
 
             }
-        });*/
+        });
 
 
     }
@@ -206,7 +212,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void createApi()
     {
-        ApiCall.postUserDetails(Constant.BASE_URL + Constant.ACCOUNT_URL, registerViewModel, new Callback() {
+       /* ApiCall.postUserDetails(Constant.BASE_URL + Constant.ACCOUNT_URL, registerViewModel, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 
@@ -222,6 +228,6 @@ public class SignUpActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        });*/
     }
 }

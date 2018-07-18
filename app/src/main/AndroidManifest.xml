@@ -23,7 +23,8 @@
         <activity android:name=".screens.Dashboard" />
         <activity android:name=".screens.EditProfile" />
         <activity android:name=".screens.Donation" />
-        <activity android:name=".screens.MainActivity"></activity>
+        <activity android:name=".screens.MainActivity" />
+        <activity android:name=".screens.MinistryScreen"></activity>
     </application>
 
 </manifest>

@@ -1,10 +1,48 @@
 package com.chruchapp.jalas.chruchapp.data;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class DataModelLogin {
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
+public class DataModelLogin implements Parcelable{
+
+
+   /* public DataModelLogin(Integer id, String name, String surname, String knownAs,
+                          String gender, Integer age, String emailAddress, String mobileNumber,
+                          String address, String profession, String interests, String otherActivities,
+                          String dtCreated, String username, String password, Integer churchId, Object church, Integer userStatusId, Object userStatus,
+                          Integer cellGroupId, Object cellGroup, Integer ministryId, Object ministry, Integer branchId, Object branch) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.knownAs = knownAs;
+        this.gender = gender;
+        this.age = age;
+        this.emailAddress = emailAddress;
+        this.mobileNumber = mobileNumber;
+        this.address = address;
+        this.profession = profession;
+        this.interests = interests;
+        this.otherActivities = otherActivities;
+        this.dtCreated = dtCreated;
+        this.username = username;
+        this.password = password;
+        this.churchId = churchId;
+        this.church = church;
+        this.userStatusId = userStatusId;
+        this.userStatus = userStatus;
+        this.cellGroupId = cellGroupId;
+        this.cellGroup = cellGroup;
+        this.ministryId = ministryId;
+        this.ministry = ministry;
+        this.branchId = branchId;
+        this.branch = branch;
+    }*/
 
     /**
      * id : 4
+
      * name : Srinivas
      * surname : D
      * knownAs : Srinivas
@@ -31,37 +69,87 @@ public class DataModelLogin {
      * branch : null
      */
 
-    private int id;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("name")
+    @Expose
     private String name;
+    @SerializedName("surname")
+    @Expose
     private String surname;
+    @SerializedName("knownAs")
+    @Expose
     private String knownAs;
+    @SerializedName("gender")
+    @Expose
     private String gender;
-    private int age;
+    @SerializedName("age")
+    @Expose
+    private Integer age;
+    @SerializedName("emailAddress")
+    @Expose
     private String emailAddress;
+    @SerializedName("mobileNumber")
+    @Expose
     private String mobileNumber;
+    @SerializedName("address")
+    @Expose
     private String address;
+    @SerializedName("profession")
+    @Expose
     private String profession;
+    @SerializedName("interests")
+    @Expose
     private String interests;
+    @SerializedName("otherActivities")
+    @Expose
     private String otherActivities;
-    private String dtCreated;
+   /* @SerializedName("dtCreated")
+    @Expose
+    private String dtCreated;*/
+    @SerializedName("username")
+    @Expose
     private String username;
+    @SerializedName("password")
+    @Expose
     private String password;
-    private int churchId;
-    //private Object church;
-    private int userStatusId;
-    //private Object userStatus;
-    private int cellGroupId;
-    //private Object cellGroup;
-    private int ministryId;
-    //private Object ministry;
-    private int branchId;
-    //private Object branch;
+    @SerializedName("churchId")
+    @Expose
+    private Integer churchId;
+    @SerializedName("church")
+    @Expose
+    private Object church;
+    @SerializedName("userStatusId")
+    @Expose
+    private Integer userStatusId;
+    @SerializedName("userStatus")
+    @Expose
+    private Object userStatus;
+    @SerializedName("cellGroupId")
+    @Expose
+    private Integer cellGroupId;
+    @SerializedName("cellGroup")
+    @Expose
+    private Object cellGroup;
+    @SerializedName("ministryId")
+    @Expose
+    private Integer ministryId;
+    @SerializedName("ministry")
+    @Expose
+    private Object ministry;
+    @SerializedName("branchId")
+    @Expose
+    private Integer branchId;
+    @SerializedName("branch")
+    @Expose
+    private Object branch;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -97,11 +185,11 @@ public class DataModelLogin {
         this.gender = gender;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -153,13 +241,13 @@ public class DataModelLogin {
         this.otherActivities = otherActivities;
     }
 
-    public String getDtCreated() {
+   /* public String getDtCreated() {
         return dtCreated;
     }
 
     public void setDtCreated(String dtCreated) {
         this.dtCreated = dtCreated;
-    }
+    }*/
 
     public String getUsername() {
         return username;
@@ -177,83 +265,160 @@ public class DataModelLogin {
         this.password = password;
     }
 
-    public int getChurchId() {
+    public Integer getChurchId() {
         return churchId;
     }
 
-    public void setChurchId(int churchId) {
+    public void setChurchId(Integer churchId) {
         this.churchId = churchId;
     }
 
-  /*  public Object getChurch() {
+    public Object getChurch() {
         return church;
     }
 
     public void setChurch(Object church) {
         this.church = church;
-    }*/
+    }
 
-    public int getUserStatusId() {
+    public Integer getUserStatusId() {
         return userStatusId;
     }
 
-    public void setUserStatusId(int userStatusId) {
+    public void setUserStatusId(Integer userStatusId) {
         this.userStatusId = userStatusId;
     }
 
-   /* public Object getUserStatus() {
+    public Object getUserStatus() {
         return userStatus;
     }
 
     public void setUserStatus(Object userStatus) {
-        this.userStatus = userStatus;*/
-   // }
+        this.userStatus = userStatus;
+    }
 
-    public int getCellGroupId() {
+    public Integer getCellGroupId() {
         return cellGroupId;
     }
 
-    public void setCellGroupId(int cellGroupId) {
+    public void setCellGroupId(Integer cellGroupId) {
         this.cellGroupId = cellGroupId;
     }
 
-   /* public Object getCellGroup() {
+    public Object getCellGroup() {
         return cellGroup;
     }
 
     public void setCellGroup(Object cellGroup) {
         this.cellGroup = cellGroup;
     }
-*/
-    public int getMinistryId() {
+
+    public Integer getMinistryId() {
         return ministryId;
     }
 
-    public void setMinistryId(int ministryId) {
+    public void setMinistryId(Integer ministryId) {
         this.ministryId = ministryId;
     }
 
-  /*  public Object getMinistry() {
+    public Object getMinistry() {
         return ministry;
     }
 
     public void setMinistry(Object ministry) {
         this.ministry = ministry;
-    }*/
+    }
 
-    public int getBranchId() {
+    public Integer getBranchId() {
         return branchId;
     }
 
-    public void setBranchId(int branchId) {
+    public void setBranchId(Integer branchId) {
         this.branchId = branchId;
     }
 
-   /* public Object getBranch() {
+    public Object getBranch() {
         return branch;
     }
 
     public void setBranch(Object branch) {
         this.branch = branch;
-    }*/
+    }
+
+    @Override
+    public int describeContents() {
+        return hashCode();
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+
+        parcel.writeInt(id);
+        parcel.writeString(name);
+        parcel.writeString(surname);
+        parcel.writeString(knownAs);
+        parcel.writeString(gender);
+        parcel.writeInt(age);
+        parcel.writeString(emailAddress);
+        parcel.writeString(mobileNumber);
+        parcel.writeString(address);
+        parcel.writeString(profession);
+        parcel.writeString(interests);
+        parcel.writeString(otherActivities);
+
+        parcel.writeString(username);
+        parcel.writeString(password);
+        parcel.writeInt(churchId);
+        parcel.writeValue(church);
+        parcel.writeInt(userStatusId);
+        parcel.writeValue(userStatus);
+        parcel.writeInt(cellGroupId);
+        parcel.writeValue(cellGroup);
+        parcel.writeInt(ministryId);
+        parcel.writeValue(ministry);
+        parcel.writeInt(branchId);
+        parcel.writeValue(branch);
+    }
+
+    public DataModelLogin(Parcel parcel) {
+        id = parcel.readInt();
+        name = parcel.readString();
+        surname = parcel.readString();
+        knownAs = parcel.readString();
+        gender = parcel.readString();
+        age = parcel.readInt();
+        emailAddress =   parcel.readString();
+        mobileNumber = parcel.readString();
+        address = parcel.readString();
+        profession = parcel.readString();
+        interests = parcel.readString();
+        otherActivities = parcel.readString();
+        username = parcel.readString();
+        password = parcel.readString();
+        churchId = parcel.readInt();
+        church = parcel.readString();
+        userStatusId = parcel.readInt();
+        userStatus = parcel.readString();
+        cellGroupId = parcel.readInt();
+        cellGroup = parcel.readString();
+        ministryId = parcel.readInt();
+        ministry =   parcel.readString();
+        branchId = parcel.readInt();
+        branch =   parcel.readString();
+    }
+
+    public static final Parcelable.Creator<DataModelLogin> CREATOR = new Parcelable.Creator<DataModelLogin>() {
+
+        @Override
+        public DataModelLogin createFromParcel(Parcel parcel) {
+            return new DataModelLogin(parcel);
+        }
+
+        @Override
+        public DataModelLogin[] newArray(int size) {
+            return new DataModelLogin[0];
+        }
+    };
+
+
 }

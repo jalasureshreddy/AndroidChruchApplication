@@ -112,7 +112,7 @@
                     android:id="@+id/radioButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male "
+                    android:text="Male"
                     android:textColor="#fff"
                     android:textSize="18sp"/>
 
@@ -133,6 +133,31 @@
                 android:text="male"
                 android:textColor="#fff"
                 android:textColorHint="#d9e5f3"/>-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/age"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Age :"
+                android:textSize="16dp"
+                android:textColor="#fff"/>
+            <EditText
+                android:id="@+id/editeage"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColor="#fff"
+                android:textColorHint="#d9e5f3"/>
         </LinearLayout>
 
         <LinearLayout
@@ -270,7 +295,7 @@
                 android:textColorHint="#d9e5f3"/>
         </LinearLayout>
 
-        <LinearLayout
+       <!-- <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -290,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:textColorHint="#d9e5f3"/>
-        </LinearLayout>
+        </LinearLayout>-->
 
         <LinearLayout
             android:orientation="horizontal"

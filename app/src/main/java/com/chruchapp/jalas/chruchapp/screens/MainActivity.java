@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chruchapp.jalas.chruchapp.R;
 import com.chruchapp.jalas.chruchapp.data.DataModelLogin;
+import com.chruchapp.jalas.chruchapp.network.APIService;
 import com.chruchapp.jalas.chruchapp.network.ApiCall;
 import com.chruchapp.jalas.chruchapp.utils.Constant;
 import com.google.gson.Gson;
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     String userName;
     String password;
 
+    private APIService mAPIService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/LatoLight.ttf");
         user.setTypeface(custom_font);
         pass.setTypeface(custom_font);
+
+        mAPIService = ApiCall.getAPIService();
 
         Typeface custom_font1 = Typeface.createFromAsset(getAssets(), "fonts/LatoRegular.ttf");
 
@@ -73,52 +79,36 @@ public class MainActivity extends AppCompatActivity {
         userName = user.getText().toString();
         password = pass.getText().toString();
 
+
+        createApiCall(userName,password);
         //createApiCallTest(userName,password);
 
     }
 
-  /*  private void createApiCallTest(String userName,String password)
-    {
-        ApiCall.post(Constant.BASE_URL+Constant.ACCOUNT_URL+Constant.ACCOUNT_URL_LOGIN+userName+"/"+password)
+    private void createApiCall(String userName, String password) {
 
-    }*/
-
-    private void createApiCall(String userName,String password)
-    {
-        ApiCall.get(Constant.BASE_URL+Constant.ACCOUNT_URL+Constant.ACCOUNT_URL_LOGIN+userName+"/"+password, new Callback() {
+        mAPIService.login(userName,password).enqueue(new retrofit2.Callback<DataModelLogin>() {
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onResponse(retrofit2.Call<DataModelLogin> call, retrofit2.Response<DataModelLogin> response) {
 
-                System.out.println("exception "+e);
+                if(response.isSuccessful()) {
+                    System.out.println("response ===== "+response.message());
+                    if(response.message().equalsIgnoreCase("OK")) {
+                        Intent intent = new Intent(MainActivity.this, EditProfile.class);
+                        intent.putExtra("DataModelLogin", response.body());
+                        startActivity(intent);
+                    }
+                    else {
+                        Toast.makeText(MainActivity.this,"Wrong Credentials...",Toast.LENGTH_LONG).show();
+                    }
+
+                }
             }
 
             @Override
-            public void onResponse(Call call,final Response response) throws IOException {
-
-                if(response.isSuccessful())
-                {
-                    System.out.println("Response ==== "+response.body().string());
-                    final Gson gson = new GsonBuilder().create();
-                 /*   new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-
-                                System.out.println("coming here ");
-                                DataModelLogin data = gson.fromJson(response.body().toString(),DataModelLogin.class);
-                                 System.out.println("data ===== "+data.getName());
-                                Intent intent = new Intent(MainActivity.this,EditProfile.class);
-                                startActivity(intent);
-
-
-                        }
-                    }).start();
-*/
-                }
-                else
-                {
-                    System.out.println("No Response ==== "+response.body().string());
-                }
+            public void onFailure(retrofit2.Call<DataModelLogin> call, Throwable t) {
+                Log.e("Suresh", "Unable to submit post to API.");
             }
         });
     }
-}
+    }
