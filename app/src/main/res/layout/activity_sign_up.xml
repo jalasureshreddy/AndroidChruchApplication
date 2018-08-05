@@ -268,7 +268,7 @@
                     android:layout_gravity="bottom"
                     android:padding="16dp"
                     android:letterSpacing="0.2"/>
-                <TextView
+                <!--<TextView
                     android:padding="20dp"
                     android:id="@+id/login"
                     android:layout_width="match_parent"
@@ -276,7 +276,7 @@
                     android:gravity="center"
                     android:text="Already have an Account ?"
                     android:textColor="#d9e5f3"
-                    android:letterSpacing="0.1"/>
+                    android:letterSpacing="0.1"/>-->
             </LinearLayout>
             <!--<LinearLayout
                 android:layout_width="match_parent"

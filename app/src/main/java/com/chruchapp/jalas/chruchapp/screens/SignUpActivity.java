@@ -75,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity {
         //createApi();
         /*Intent it = new Intent(SignUpActivity.this,MainActivity.class);
         startActivity(it);*/
-        Intent intent =new Intent(this,LandingScreen.class);
+        Intent intent =new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 
@@ -99,26 +99,6 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void createApiService(RegisterViewModel registerViewModel) {
-
-       /* mAPIService.savePost(registerViewModel.getChurchId(),registerViewModel.getName(),
-                             registerViewModel.getSurname(),registerViewModel.getEmailId(),
-                             registerViewModel.getPassword(),registerViewModel.getPhoneNumber(),
-                             registerViewModel.getConfirmPassword()).enqueue(new retrofit2.Callback<RegisterViewModel>() {
-            @Override
-            public void onResponse(retrofit2.Call<RegisterViewModel> call, retrofit2.Response<RegisterViewModel> response) {
-
-                System.out.println("response ==== "+response);
-                if(response.isSuccessful()) {
-                    System.out.println(("response === "+response.body().toString()));
-                 //   Log.i(TAG, "post submitted to API." + response.body().toString());
-                }
-            }
-
-            @Override
-            public void onFailure(retrofit2.Call<RegisterViewModel> call, Throwable t) {
-                Log.e("Suresh", "Unable to submit post to API.");
-            }
-        });*/
 
         mAPIService.savePost(registerViewModel).enqueue(new retrofit2.Callback<RegisterViewModel>() {
             @Override
@@ -210,24 +190,4 @@ public class SignUpActivity extends AppCompatActivity {
         return matcher.matches();
     }
 
-    private void createApi()
-    {
-       /* ApiCall.postUserDetails(Constant.BASE_URL + Constant.ACCOUNT_URL, registerViewModel, new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-                System.out.println("response data === "+response.body().string());
-                if(response.isSuccessful())
-                {
-                    System.out.println("response successful ");
-                }
-
-            }
-        });*/
-    }
 }

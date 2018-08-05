@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <group
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_home"
+                android:title="Home" />
+        </group>
+
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_members"
+                android:title="Members" />
+        </group>
+
+        <group
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_groups"
+                android:title="Groups" />
+        </group>
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ministry"
+            android:title="Ministry" />
+    </group>
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_events"
+            android:title="Events" />
+    </group>
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_announcements"
+            android:title="Announcements" />
+    </group>
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_sermons"
+            android:title="Sermons" />
+    </group>
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_payments"
+            android:title="Payments" />
+    </group>
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about"
+            android:title="About Us" />
+    </group>
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+    </group>
+
+</menu>

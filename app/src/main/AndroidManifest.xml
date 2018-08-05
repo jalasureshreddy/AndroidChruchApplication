@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.chruchapp.jalas.chruchapp">
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -11,8 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".screens.LandingScreen">
+        android:theme="@style/AppThemes">
+        <activity android:name=".screens.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,8 +23,12 @@
         <activity android:name=".screens.Dashboard" />
         <activity android:name=".screens.EditProfile" />
         <activity android:name=".screens.Donation" />
-        <activity android:name=".screens.MainActivity" />
-        <activity android:name=".screens.MinistryScreen"></activity>
+        <activity android:name=".screens.LandingScreen" />
+        <activity android:name=".screens.MinistryScreen" />
+        <activity android:name=".screens.EventsScreen" />
+        <activity android:name=".screens.BranchesScreen" />
+        <activity android:name=".screens.SermonsScreen" />
+        <activity android:name=".screens.AnnouncementsScreen" />
     </application>
 
 </manifest>

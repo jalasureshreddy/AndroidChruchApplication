@@ -1,10 +1,23 @@
 package com.chruchapp.jalas.chruchapp.network;
 
+import com.chruchapp.jalas.chruchapp.data.AnnouncementsModel;
+import com.chruchapp.jalas.chruchapp.data.BranchesModel;
+import com.chruchapp.jalas.chruchapp.data.CellGroupModel;
+import com.chruchapp.jalas.chruchapp.data.ChurchModel;
 import com.chruchapp.jalas.chruchapp.data.DataModelLogin;
 import com.chruchapp.jalas.chruchapp.data.DataModelUpdate;
+import com.chruchapp.jalas.chruchapp.data.EventsModel;
+import com.chruchapp.jalas.chruchapp.data.MembersModel;
 import com.chruchapp.jalas.chruchapp.data.MinistryModel;
+import com.chruchapp.jalas.chruchapp.data.PaymentsModel;
+import com.chruchapp.jalas.chruchapp.data.PaymentsTypeModel;
+import com.chruchapp.jalas.chruchapp.data.ProductsModel;
 import com.chruchapp.jalas.chruchapp.data.RegisterViewModel;
+import com.chruchapp.jalas.chruchapp.data.SermonsModel;
 import com.chruchapp.jalas.chruchapp.utils.Constant;
+
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -60,7 +73,37 @@ public interface APIService {
     Call<DataModelUpdate> savePostUpdate(@Body DataModelUpdate post);
 
 
-    @POST(Constant.MINISTRIES_URL)
-    Call<MinistryModel> doGetListMinistry();
+    @GET(Constant.MINISTRIES_URL)
+    Call<List<MinistryModel>> doGetListMinistry();
 
+    @GET(Constant.EVENTS)
+    Call<List<EventsModel>> doGetListEvents();
+
+    @GET(Constant.Branches)
+    Call<List<BranchesModel>> doGetListBranches();
+
+    @GET(Constant.Sermons)
+    Call<List<SermonsModel>> doGetListSermons();
+
+    @GET(Constant.Announcements)
+    Call<List<AnnouncementsModel>> doGetListAnnouncements();
+
+    @GET(Constant.CellGroups)
+    Call<List<CellGroupModel>> doGetListCellGroup();
+
+    @GET(Constant.ACCOUNT_URL)
+    Call<List<MembersModel>> doGetListAccount();
+
+    @GET(Constant.Churches)
+    Call<List<ChurchModel>> doGetListChurches();
+
+
+    @GET(Constant.Products)
+    Call<List<ProductsModel>> doGetListProduct();
+
+    @GET(Constant.Payments)
+    Call<List<PaymentsModel>> doGetListPayments();
+
+    @GET(Constant.PaymentTypes)
+    Call<List<PaymentsTypeModel>> doGetListPaymentsType();
 }
